@@ -10,7 +10,7 @@ function threeSum(arr, target) {
 		}
 	}
 	for(let i=0;i<arr.length;i++){
-		if(obj[arr[i]]==1){
+		if(obj[arr[i]]==target){
 			return arr[i];
 		}
 	}
@@ -18,5 +18,8 @@ function threeSum(arr, target) {
 }
 let arr =[-1,2,1,-4];
 let target=1;
-threeSum(arr,target);
+let arr = prompt("enter the array values");
+let result = threeSum(arr, target);
+alert(result);
+
 module.exports = threeSum;
