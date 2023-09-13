@@ -16,7 +16,7 @@ function threeSum(arr, target) {
 	}
   return null;
 }
-let arr =[-1,2,1,-4];
+// let arr =[-1,2,1,-4];
 let target=1;
 let arr = prompt("enter the array values");
 let result = threeSum(arr, target);
