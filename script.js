@@ -1,25 +1,18 @@
 function threeSum(arr, target) {
-// write your code here
-	let obj={};
-	for(let i=0;i<arr.length;i++){
-		if(obj[arr[i]]!= undefined){
-			obj[arr[i]] +=1;
-		}
-		else{
-			obj[arr[i]]=1;
-		}
-	}
-	for(let i=0;i<arr.length;i++){
-		if(obj[arr[i]]==target){
-			return arr[i];
-		}
-	}
-  return null;
+	let initialvalue = Infinity,ans= -1;
+    let n= arr.length;
+    for(let i=0;i<n-3;i++){
+        for(let j=i+1;j<=n-2;j++){
+            for(let k=j+1;k<=n-1;k++){
+                let sum = arr[i]+arr[k]+arr[j];
+            let diff=Math.abs(sum-target);
+            if(initialvalue>diff){
+                ans = sum;
+            }
+            }
+        }
+    }
+    return ans;
 }
-// let arr =[-1,2,1,-4];
-let target=1;
-let arr = prompt("enter the array values");
-let result = threeSum(arr, target);
-alert(result);
 
 module.exports = threeSum;
